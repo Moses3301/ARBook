@@ -56,6 +56,9 @@
     <Reference Include="Unity.Analytics.DataPrivacy">
       <HintPath>Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
+    <Reference Include="VuforiaScripts">
+      <HintPath>Library/ScriptAssemblies/VuforiaScripts.dll</HintPath>
+    </Reference>
     <Reference Include="MetroSupport/Managed/il2cpp/UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.11f1\Editor\Data\PlaybackEngines\MetroSupport/Managed/il2cpp/UnityEngine.dll</HintPath>
     </Reference>
@@ -233,8 +236,14 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="VuforiaEditorScripts">
+      <HintPath>Library/ScriptAssemblies/VuforiaEditorScripts.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.11f1/Editor/Data/UnityExtensions/Unity/GUISystem/Standalone/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Vuforia.UnityExtensions">
+      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.11f1/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/WindowsStoreApps/Vuforia.UnityExtensions.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.1.11f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
@@ -857,6 +866,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ball.cs" />
+    <Compile Include="Assets\EggMovment.cs" />
     <Compile Include="Assets\findPos.cs" />
     <Compile Include="Assets\Movment.cs" />
     <Compile Include="Assets\ReceiveResult.cs" />

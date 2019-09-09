@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,35 +8,31 @@ using UnityEngine.Windows.Speech;
 public class VoiceReg : MonoBehaviour
 {
     KeywordRecognizer keywordRecognizer = null;
-    string[] words = { "we", "only", "said", "goodbye", "with", "words",
-                        "I", "died", "a hundred", "times",
-                        "You", "go", "back", "to", "her",
-                        "And", "I", "go", "back", "to",
-                        "I", "go", "back", "to", "us" };
+    public string[] words;
     int index;
-    TextMesh mText;
-    GameObject mball;
+    public GameObject ball;
+    public GameObject ballPosContainer;
     Transform[] mballPos;
+    Animator anim;
     private void Start()
     {
         Debug.Log("Start() >>");
         index = 0;
-        mText = GameObject.Find("Text").GetComponent<TextMesh>();
-        mball = GameObject.Find("ball");
-        mballPos = GameObject.Find("ballPos").GetComponentsInChildren<Transform>();
         keywordRecognizer = new KeywordRecognizer(words, ConfidenceLevel.Low);
         keywordRecognizer.OnPhraseRecognized += KeywordRecognizer_OnPhraseRecognized;
         keywordRecognizer.Start();
+        mballPos = ballPosContainer.GetComponentsInChildren<Transform>();
         moveBall();
+        anim =  GetComponent<Animator>();
         Debug.Log("Start() <<");
     }
 
     private void KeywordRecognizer_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
-        Debug.Log(args.text);
+        Debug.Log(args.text + " ?= " + words[index]);
         if (words[index].Equals(args.text))
         {
-            updateHelpText();
+            playAnimation();
             if (index < words.Length - 1)
                 index++;
             moveBall();
@@ -44,11 +41,20 @@ public class VoiceReg : MonoBehaviour
 
     private void moveBall()
     {
-        Debug.Log("ball move to " + mballPos[index + 1]);
-        mball.transform.position = mballPos[index + 1].position;
+        ball.transform.position = mballPos[index + 1].position;
     }
-    private void updateHelpText()
+
+    private void playAnimation()
     {
-        mText.text = words[index];
+        switch (index)
+        {
+            case 0:
+                anim.Play("eggMove");
+                break;
+            case 9:
+                anim.Play("eggPop");
+                break;
+        }
     }
 }
+

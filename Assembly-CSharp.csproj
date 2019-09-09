@@ -63,11 +63,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ball.cs" />
+    <Compile Include="Assets\EggMovment.cs" />
     <Compile Include="Assets\findPos.cs" />
     <Compile Include="Assets\Movment.cs" />
     <Compile Include="Assets\ReceiveResult.cs" />
     <Compile Include="Assets\Test.cs" />
     <Compile Include="Assets\VoiceReg.cs" />
+    <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
+    <None Include="Assets\Vuforia\Shaders\CameraDiffuse.shader" />
+    <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+    <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
+    <None Include="Assets\Vuforia\Shaders\OutlineOpaque.shader" />
+    <None Include="Assets\StreamingAssets\Vuforia\AR_Demo.xml" />
+    <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+    <None Include="Assets\Vuforia\Databases\Emulator\VuforiaEmulator.xml" />
+    <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
+    <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
+    <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
+    <None Include="Assets\Vuforia\Shaders\DepthContour.shader" />
+    <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Moses/SpeechTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
@@ -629,6 +643,16 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.1.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="VuforiaScripts.csproj">
+      <Project>{20794752-C254-AF75-28BA-7DCED4543747}</Project>
+      <Name>VuforiaScripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="VuforiaEditorScripts.csproj">
+      <Project>{6FEF0F7D-B8C0-DF87-803F-E2A39C989B1B}</Project>
+      <Name>VuforiaEditorScripts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

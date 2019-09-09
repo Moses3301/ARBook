@@ -276,3 +276,9 @@ C:\Users\Moses\SpeechTest\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cac
 C:\Users\Moses\SpeechTest\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Moses\SpeechTest\obj\Debug\Assembly-CSharp.dll
 C:\Users\Moses\SpeechTest\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Moses\SpeechTest\Temp\bin\Debug\Vuforia.UnityExtensions.Editor.dll
+C:\Users\Moses\SpeechTest\Temp\bin\Debug\UnityEditor.UI.dll
+C:\Users\Moses\SpeechTest\Temp\bin\Debug\VuforiaScripts.pdb
+C:\Users\Moses\SpeechTest\Temp\bin\Debug\VuforiaEditorScripts.pdb
+C:\Users\Moses\SpeechTest\Temp\bin\Debug\Vuforia.UnityExtensions.Editor.xml
+C:\Users\Moses\SpeechTest\Temp\bin\Debug\UnityEditor.UI.xml
